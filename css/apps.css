@@ -1,0 +1,370 @@
+/* Core Styles */
+
+* {}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #fff;
+	color: #fff;
+	font-size: 1.1em;
+	line-height: 1.5;
+	text-align: center;
+
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+.btn {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	padding: 1em 2em;
+	border: 1px solid #666;
+	margin: 0.5em 0;
+}
+
+.btn:hover {
+	background: #eaeaea;
+	color: #333;
+}
+
+.btn2 {
+	display: inline-block;
+	background: #999;
+	color: #fff;
+	text-decoration: none;
+	padding: 1em 2em;
+	border: 1px solid #666;
+	margin: 0.5em 0;
+}
+
+.btn2:hover {
+	background: #eaeaea;
+	color: #333;
+}
+
+/* Header Showcase */
+
+#showcase {
+	min-height: 450px;
+	color: #fff;
+	text-align: center;
+
+}
+
+
+
+
+#showcase .bg-image {
+	position: absolute;
+	background: #333 url("../img/logo.png")
+	/*url("https://static.pexels.com/photos/248515/pexels-photo-248515.png")*/
+	;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 250px;
+	z-index: 1;
+	opacity: 0.6;
+}
+
+/*
+
+.weld {
+	position: absolute;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 275px;
+	z-index: -1;
+	opacity: 0.2;
+}
+*/
+
+#showcase h1 {
+	padding-top: 100px;
+	padding-bottom: 0;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+	padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+	background: #eaeaea;
+	color: #333;
+	padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b {
+	padding: 2em 1em 1em;
+}
+
+#section-b ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#section-b li {
+	margin-bottom: 1em;
+	background: #fff;
+	color: #333;
+}
+
+.card-content {
+	padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+	background: #fff;
+	color: #333;
+	padding: 2em;
+}
+
+/*
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.card-content {
+	padding: 1.5em;
+}
+*/
+
+/* Section D / Boxes */
+
+/*maybe i should split these into section d and section e?*/
+
+#section-d .box {
+	padding: 2em;
+	color: #333;
+	background: #fff;
+	/*	text-align: left;*/
+}
+
+#section-d .box:first-child {
+	background: #2690d4;
+	/*	align-items: center;*/
+	/*
+	padding: 100px;
+	display: inline-block;
+*/
+}
+
+#section-d .box:second-child {
+	background: #fff;
+}
+
+/* Footer */
+
+#main-footer {
+	padding: 2em;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+#main-footer a {
+	color: #2690d4;
+	text-decoration: none;
+}
+
+#content {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content ul {
+	list-style-type: none;
+}
+
+#content li {
+	float: inherit;
+	/*	clear: right;*/
+	width: 175px;
+	display: inline-block;
+	margin-right: 50px;
+	margin-bottom: 50px;
+}
+
+#content img {
+	width: 200px;
+	height: 150px;
+}
+
+/* Media Queries */
+
+/*after you enter the size like 700px you can test it by doing something like body {display: none}*/
+
+@media (min-width: 700px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+	}
+
+	#section-a .content-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+
+	#section-a .content-text p {
+		padding-top: 0;
+	}
+
+	.content-wrap,
+	#section-b ul {
+		grid-column: 2/4;
+	}
+
+	/*
+	.box1 {
+
+		grid-column: span 1/4;
+		grid-row: auto;
+	}
+	.box2 {
+
+		grid-column: span 1/4;
+		grid-row: auto;
+	}
+	*/
+	.box,
+	#main-footer div {
+		grid-column: span 2;
+	}
+
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#section-b li {
+		width: 31%;
+	}
+}
+
+/*
+.layout {
+	position: center-align;
+	left: 0;
+	padding-left: 0;
+}
+*/
+
+/*
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: green;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 23px;
+
+	position: relative;
+}
+
+nav a {
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	z-index: 2;
+}
+
+nav a:hover {
+	color: #000;
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #444;
+
+	position: absolute;
+	top: 0;
+	width: 0%;
+
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+*/
+
+.pure-form {
+	/*	align-content: flex-start;*/
+	/*	padding-left: 10px;*/
+	/*	margin-left: 10px;*/
+	/*
+	
+	box-sizing: border-box;
+	margin: 20px;
+	padding: 0 20px 0 2opx;
+	float: left;
+*/
+	background: #2690d4;
+
+}
+
+#section-d .box:second-child {
+	background: #fff;
+}
+
+.map {
+	margin: 10px auto;
+}
+
+.nav {
+	height: 5px;
+	padding-top: 2px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 90%;
+	background: #333;
+	/*	margin: 0 5% 0 5%;*/
+	margin: auto;
+}
